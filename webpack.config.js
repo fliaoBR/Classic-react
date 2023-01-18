@@ -2,13 +2,13 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-	entry: "./App/index.jsx",
+	entry: "./app/index.jsx",
 	output: {
 		path: path.resolve(__dirname, "dist"),
 		filename: "index_bundle.js",
 		publicPath: "/",
 	},
-	module: {f
+	module: {
 		rules: [
 			{ test: /\.(js|jsx)$/, use: "babel-loader" },
 			{ test: /\.css$/, use: ["style-loader", "css-loader"] },
@@ -27,4 +27,3 @@ module.exports = {
 		historyApiFallback: true,
 	},
 };
-f;
